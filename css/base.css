@@ -122,12 +122,3 @@ textarea:focus-visible {
   white-space: nowrap;
   border: 0;
 }
-
-/* No Scrollbar Utility for Carousels */
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}

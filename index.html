@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <!-- Security Headers via Meta Tags -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' https://lh3.googleusercontent.com data:; connect-src 'self' https://formsubmit.co https://formspree.io https://generativelanguage.googleapis.com; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://formsubmit.co https://formspree.io;" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formsubmit.co https://formspree.io; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://formsubmit.co https://formspree.io;" />
   <meta http-equiv="X-Content-Type-Options" content="nosniff" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
 
@@ -262,174 +262,151 @@
       </section>
 
       <!-- =======================================================================
-           4. STACK TECNOLÓGICO Y FILTROS INTERACTIVOS
+           4. STACK TECNOLÓGICO (GRILLA POR CATEGORÍAS)
            ======================================================================= -->
-      <section id="tecnologias" class="tech-section">
-        <div class="container" style="margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 1rem;">
-          <div style="display: flex; flex-direction: column;">
+      <section id="tecnologias" class="tech-section" aria-labelledby="tech-title">
+        <div class="container">
+          <div class="section-header">
             <div class="section-tag">
+              <span class="material-symbols-outlined" style="font-size: 18px; color: var(--color-primary);">stacks</span>
               <span class="code-badge" style="color: var(--color-primary);">Stack Tecnológico</span>
             </div>
-            <h2 class="section-title" style="font-size: 1.5rem; margin-bottom: 0;">Herramientas y Tecnologías Dominadas</h2>
+            <h2 id="tech-title" class="section-title">Tecnologías y Herramientas</h2>
+            <p class="section-subtitle">
+              Mi stack organizado por área, para ver de un vistazo con qué tecnologías trabajo en cada etapa del desarrollo.
+            </p>
           </div>
 
-          <!-- Filter Pills -->
-          <div class="tech-filter-pills" role="toolbar" aria-label="Filtro de tecnologías">
-            <button class="tech-filter-btn active" data-cat="all" aria-pressed="true">Todos</button>
-            <button class="tech-filter-btn" data-cat="frontend" aria-pressed="false">Frontend &amp; UI/UX</button>
-            <button class="tech-filter-btn" data-cat="backend" aria-pressed="false">Backend &amp; Java</button>
-            <button class="tech-filter-btn" data-cat="db" aria-pressed="false">Bases de Datos &amp; Git</button>
-            <button class="tech-filter-btn" data-cat="qa" aria-pressed="false">Testing &amp; QA</button>
-            <button class="tech-filter-btn" data-cat="sec" aria-pressed="false">Seguridad &amp; IA</button>
+          <!-- Stack principal: resumen rápido de las tecnologías core -->
+          <div class="stack-core">
+            <span class="stack-core-label" id="stack-core-label">
+              <span class="material-symbols-outlined" aria-hidden="true">bolt</span>
+              Stack principal
+            </span>
+            <ul class="stack-core-list" aria-labelledby="stack-core-label">
+              <li>Java</li>
+              <li>Spring Boot</li>
+              <li>React</li>
+              <li>Next.js</li>
+              <li>TypeScript</li>
+              <li>PostgreSQL</li>
+              <li>Cypress</li>
+            </ul>
           </div>
-        </div>
 
-        <!-- Scrolling Track -->
-        <div class="tech-scroll-track">
-          <div class="scroll-gradient-left" aria-hidden="true"></div>
-          <div class="scroll-gradient-right" aria-hidden="true"></div>
-
-          <div class="tech-card-container no-scrollbar" id="tech-card-container">
+          <!-- Grilla de categorías -->
+          <div class="stack-grid">
             <!-- FRONTEND -->
-            <div class="tech-card" data-cat="frontend">
-              <span class="material-symbols-outlined" style="font-size: 22px; color: #f472b6;">design_services</span>
-              <div>
-                <div class="tech-card-title">Figma</div>
-                <div class="tech-card-desc">UI/UX &amp; Prototipado</div>
-              </div>
-            </div>
-
-            <div class="tech-card" data-cat="frontend">
-              <span class="material-symbols-outlined" style="font-size: 22px; color: #fb923c;">html</span>
-              <div>
-                <div class="tech-card-title">HTML5 &amp; CSS3</div>
-                <div class="tech-card-desc">Semántica &amp; Estilos</div>
-              </div>
-            </div>
-
-            <div class="tech-card" data-cat="frontend">
-              <span class="material-symbols-outlined" style="font-size: 22px; color: #2dd4bf;">palette</span>
-              <div>
-                <div class="tech-card-title">Tailwind CSS</div>
-                <div class="tech-card-desc">Utility-first Design</div>
-              </div>
-            </div>
-
-            <div class="tech-card" data-cat="frontend">
-              <span class="material-symbols-outlined" style="font-size: 22px; color: #c084fc;">grid_view</span>
-              <div>
-                <div class="tech-card-title">Bootstrap</div>
-                <div class="tech-card-desc">Responsive Layouts</div>
-              </div>
-            </div>
-
-            <div class="tech-card" data-cat="frontend">
-              <span class="material-symbols-outlined" style="font-size: 22px; color: #fde047;">code</span>
-              <div>
-                <div class="tech-card-title">JavaScript &amp; TypeScript</div>
-                <div class="tech-card-desc">ES6+ &amp; Strict Typing</div>
-              </div>
-            </div>
-
-            <div class="tech-card" data-cat="frontend">
-              <span class="material-symbols-outlined" style="font-size: 22px; color: #22d3ee;">deployed_code</span>
-              <div>
-                <div class="tech-card-title">React &amp; Next.js</div>
-                <div class="tech-card-desc">SPA &amp; SSR Moderno</div>
-              </div>
-            </div>
+            <article class="stack-card" style="--stack-accent: #4cd7f6;">
+              <header class="stack-card-header">
+                <span class="stack-card-icon material-symbols-outlined" aria-hidden="true">web</span>
+                <div>
+                  <h3 class="stack-card-title">Frontend</h3>
+                  <p class="stack-card-desc">Interfaces modernas, responsive y accesibles</p>
+                </div>
+              </header>
+              <ul class="stack-list">
+                <li class="stack-item">React</li>
+                <li class="stack-item">Next.js</li>
+                <li class="stack-item">JavaScript</li>
+                <li class="stack-item">TypeScript</li>
+                <li class="stack-item">HTML5</li>
+                <li class="stack-item">CSS3</li>
+                <li class="stack-item">Tailwind CSS</li>
+                <li class="stack-item">Bootstrap</li>
+              </ul>
+            </article>
 
             <!-- BACKEND -->
-            <div class="tech-card" data-cat="backend">
-              <span class="material-symbols-outlined" style="font-size: 22px; color: #f87171;">coffee</span>
-              <div>
-                <div class="tech-card-title">Java</div>
-                <div class="tech-card-desc">POO Robusta &amp; Tipado</div>
-              </div>
-            </div>
+            <article class="stack-card" style="--stack-accent: #34d399;">
+              <header class="stack-card-header">
+                <span class="stack-card-icon material-symbols-outlined" aria-hidden="true">dns</span>
+                <div>
+                  <h3 class="stack-card-title">Backend</h3>
+                  <p class="stack-card-desc">APIs robustas, seguras y escalables</p>
+                </div>
+              </header>
+              <ul class="stack-list">
+                <li class="stack-item">Java</li>
+                <li class="stack-item">Spring Boot</li>
+                <li class="stack-item">Spring Security</li>
+                <li class="stack-item">Node.js</li>
+                <li class="stack-item">REST APIs</li>
+                <li class="stack-item">JWT</li>
+              </ul>
+            </article>
 
-            <div class="tech-card" data-cat="backend">
-              <span class="material-symbols-outlined" style="font-size: 22px; color: #34d399;">eco</span>
-              <div>
-                <div class="tech-card-title">Spring Framework &amp; Boot</div>
-                <div class="tech-card-desc">REST APIs &amp; Microservicios</div>
-              </div>
-            </div>
-
-            <div class="tech-card" data-cat="backend">
-              <span class="material-symbols-outlined" style="font-size: 22px; color: #818cf8;">lock</span>
-              <div>
-                <div class="tech-card-title">Spring Security</div>
-                <div class="tech-card-desc">Auth JWT &amp; Role Access</div>
-              </div>
-            </div>
-
-            <div class="tech-card" data-cat="backend">
-              <span class="material-symbols-outlined" style="font-size: 22px; color: #4ade80;">terminal</span>
-              <div>
-                <div class="tech-card-title">Node.js</div>
-                <div class="tech-card-desc">Event-driven Server</div>
-              </div>
-            </div>
-
-            <!-- DATABASES & DEVOPS -->
-            <div class="tech-card" data-cat="db">
-              <span class="material-symbols-outlined" style="font-size: 22px; color: #38bdf8;">database</span>
-              <div>
-                <div class="tech-card-title">PostgreSQL</div>
-                <div class="tech-card-desc">RDBMS · Modelado SQL</div>
-              </div>
-            </div>
-
-            <div class="tech-card" data-cat="db">
-              <span class="material-symbols-outlined" style="font-size: 22px; color: #f59e0b;">account_tree</span>
-              <div>
-                <div class="tech-card-title">Git &amp; GitHub</div>
-                <div class="tech-card-desc">Control de Versiones &amp; CI</div>
-              </div>
-            </div>
+            <!-- BASES DE DATOS & ARQUITECTURA -->
+            <article class="stack-card" style="--stack-accent: #c0c1ff;">
+              <header class="stack-card-header">
+                <span class="stack-card-icon material-symbols-outlined" aria-hidden="true">database</span>
+                <div>
+                  <h3 class="stack-card-title">Bases de Datos &amp; Arquitectura</h3>
+                  <p class="stack-card-desc">Modelado de datos y sistemas sostenibles</p>
+                </div>
+              </header>
+              <ul class="stack-list">
+                <li class="stack-item">PostgreSQL</li>
+                <li class="stack-item">SQL</li>
+                <li class="stack-item">Modelado relacional</li>
+                <li class="stack-item">Microservicios</li>
+                <li class="stack-item">Clean Architecture</li>
+              </ul>
+            </article>
 
             <!-- QA & TESTING -->
-            <div class="tech-card" data-cat="qa">
-              <span class="material-symbols-outlined" style="font-size: 22px; color: #5eead4;">task_alt</span>
-              <div>
-                <div class="tech-card-title">Cypress</div>
-                <div class="tech-card-desc">E2E Automation Testing</div>
-              </div>
-            </div>
+            <article class="stack-card" style="--stack-accent: #fbbf24;">
+              <header class="stack-card-header">
+                <span class="stack-card-icon material-symbols-outlined" aria-hidden="true">fact_check</span>
+                <div>
+                  <h3 class="stack-card-title">QA &amp; Testing</h3>
+                  <p class="stack-card-desc">Calidad de software manual y automatizada</p>
+                </div>
+              </header>
+              <ul class="stack-list">
+                <li class="stack-item">Cypress</li>
+                <li class="stack-item">Testing E2E</li>
+                <li class="stack-item">QA Manual</li>
+                <li class="stack-item">QA Automation</li>
+                <li class="stack-item">Casos de prueba</li>
+                <li class="stack-item">Pruebas de regresión</li>
+              </ul>
+            </article>
 
-            <div class="tech-card" data-cat="qa">
-              <span class="material-symbols-outlined" style="font-size: 22px; color: var(--color-tertiary);">checklist</span>
-              <div>
-                <div class="tech-card-title">QA Manual &amp; Automation</div>
-                <div class="tech-card-desc">Casos de Prueba &amp; Regresión</div>
-              </div>
-            </div>
+            <!-- HERRAMIENTAS & METODOLOGÍAS -->
+            <article class="stack-card" style="--stack-accent: #ddb7ff;">
+              <header class="stack-card-header">
+                <span class="stack-card-icon material-symbols-outlined" aria-hidden="true">construction</span>
+                <div>
+                  <h3 class="stack-card-title">Herramientas &amp; Metodologías</h3>
+                  <p class="stack-card-desc">Flujo de trabajo, diseño y colaboración</p>
+                </div>
+              </header>
+              <ul class="stack-list">
+                <li class="stack-item">Git</li>
+                <li class="stack-item">GitHub</li>
+                <li class="stack-item">Figma</li>
+                <li class="stack-item">Scrum</li>
+                <li class="stack-item">Power BI</li>
+              </ul>
+            </article>
 
-            <!-- SECURITY & AI -->
-            <div class="tech-card" data-cat="sec">
-              <span class="material-symbols-outlined" style="font-size: 22px; color: #fb7185;">security</span>
-              <div>
-                <div class="tech-card-title">Ciberseguridad &amp; Hacking Ético</div>
-                <div class="tech-card-desc">Big School · Análisis OWASP</div>
-              </div>
-            </div>
-
-            <div class="tech-card" data-cat="sec">
-              <span class="material-symbols-outlined" style="font-size: 22px; color: #c084fc;">smart_toy</span>
-              <div>
-                <div class="tech-card-title">Ciberdefensa con IA</div>
-                <div class="tech-card-desc">Congreso CACIC</div>
-              </div>
-            </div>
-
-            <div class="tech-card" data-cat="sec">
-              <span class="material-symbols-outlined" style="font-size: 22px; color: #facc15;">analytics</span>
-              <div>
-                <div class="tech-card-title">Power BI + IA</div>
-                <div class="tech-card-desc">Business Intelligence &amp; Data</div>
-              </div>
-            </div>
+            <!-- SEGURIDAD & IA -->
+            <article class="stack-card" style="--stack-accent: #fb7185;">
+              <header class="stack-card-header">
+                <span class="stack-card-icon material-symbols-outlined" aria-hidden="true">shield</span>
+                <div>
+                  <h3 class="stack-card-title">Seguridad &amp; IA</h3>
+                  <p class="stack-card-desc">Desarrollo seguro y análisis de amenazas</p>
+                </div>
+              </header>
+              <ul class="stack-list">
+                <li class="stack-item">Hacking Ético</li>
+                <li class="stack-item">OWASP Top 10</li>
+                <li class="stack-item">Seguridad de APIs</li>
+                <li class="stack-item">Ciberdefensa con IA</li>
+              </ul>
+            </article>
           </div>
         </div>
       </section>
@@ -1030,9 +1007,12 @@
     <div class="container footer-flex">
       <div style="display: flex; flex-direction: column; gap: 0.5rem; align-items: center; md:align-items: flex-start;">
         <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <img 
-            src="https://lh3.googleusercontent.com/aida/AEtjO1UxAWpjcdg-SHEg3e0OYghhu-7Vpr_Cj-GDR_hyTPHHVNY7Ry4N5QXsP8up_gC6vJzZPKwQ3SDCj-Jh3mUuCkFXlbCfwHWEOIGaAtuES8RY60a-NGXCKNFCPwis11OEEcfXpCncz5S2xy6SPAj0SbFk7MlI47XntdzHg9Pd7l0c9Pai-coWAJTpg47S7nBAn6Zuc0q1R9i9uHzRqPL91O5zN4YHVYlcq_iqFepuQLJmiRSQE7EpZdB-" 
-            alt="Luciano Colalunga Logo" 
+          <img
+            src="./assets/logo.png"
+            alt="Logo Luciano Colalunga"
+            width="24"
+            height="24"
+            loading="lazy"
             style="height: 1.5rem; width: 1.5rem; border-radius: var(--radius-sm); object-fit: contain;"
           />
           <span style="font-family: var(--font-sans); font-size: 1.125rem; font-weight: 600; color: var(--color-on-surface);">Luciano Colalunga</span>
