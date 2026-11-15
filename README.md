@@ -36,7 +36,11 @@ npx serve .
 
 ## Deploy
 
-Publicado en **Vercel**. Los headers de seguridad (CSP, HSTS, X-Frame-Options, etc.) se configuran en `vercel.json`.
+Publicado gratis en **GitHub Pages**, directo desde la rama `main` (carpeta raíz): cada push a `main` actualiza el sitio solo.
+
+- `CNAME` define el dominio propio `lucianocolalungadev.com.ar`.
+- `.nojekyll` hace que GitHub publique los archivos tal cual, sin procesarlos con Jekyll.
+- GitHub Pages no permite headers personalizados, así que la CSP y la Referrer-Policy van como `<meta>` en `index.html`. `vercel.json`, `netlify.toml` y `_headers` quedan por si algún día se vuelve a un host que los use.
 
 ---
 
